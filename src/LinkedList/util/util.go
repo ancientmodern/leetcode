@@ -23,10 +23,15 @@ func CreateList(array []int) *ListNode {
 	return head
 }
 
-func PrintList(head *ListNode) {
+func List2Slice(head *ListNode) []int {
+	ans := make([]int, 0)
 	for head != nil {
-		fmt.Printf("%d ", head.Val)
+		ans = append(ans, head.Val)
 		head = head.Next
 	}
-	fmt.Printf("\n")
+	return ans
+}
+
+func PrintList(head *ListNode) {
+	fmt.Println(List2Slice(head))
 }

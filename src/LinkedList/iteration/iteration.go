@@ -12,7 +12,7 @@ func ReverseList(head *ListNode) *ListNode {
 		next = cur.Next
 		cur.Next = pre
 		pre = cur
-		cur = next 
+		cur = next
 	}
 	return pre
 }
